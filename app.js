@@ -16,11 +16,11 @@ function onReady() {
 
     newLi.textContent = title;
     newLi.appendChild(checkbox);
-    console.log(newLi);
+
     toDoList.appendChild(newLi);
     newToDoText.value = '';
 
-    
+
   });
 }
 
