@@ -29,3 +29,11 @@ section {
   display: flex;
   justify-content: center;
 }
+
+li button {
+  margin-right: 10px;
+}
+
+li input {
+  margin-left: 10px;
+}

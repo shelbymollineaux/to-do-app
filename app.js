@@ -18,17 +18,25 @@ function onReady() {
     newLi.textContent = title;
     newLi.appendChild(checkbox);
 
+    let button = document.createElement('button');
+    button.textContent = 'delete';
+    newLi.prepend(button);
+
+    button.addEventListener('click', (event) => {
+      button.parentNode.remove();
+    })
+
     toDoList.appendChild(newLi);
     newToDoText.value = '';
   });
-  
+
   clearButton.addEventListener('click', (event) => {
     // console.log(event)
     let everythingChecked = document.querySelectorAll('input[type=checkbox]:checked')
     // console.log(everythingChecked)
     for (var i = 0; i<everythingChecked.length; i++){
       let textBox = everythingChecked[i]
-      textBox.parentNode.remove()
+      textBox.parentNode.remove();
     }
   })
 
@@ -39,6 +47,6 @@ function onReady() {
 
 
 window.onload = function() {
-   alert("The window has loaded!");
+   // alert("The window has loaded!");
   onReady();
 }
